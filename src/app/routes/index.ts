@@ -5,6 +5,7 @@ import { OrderRoutes } from '../modules/Order/order.routes';
 import { paymentRoutes } from '../modules/payment/payment.route';
 import { RentRoutes } from '../modules/rent/rent.route';
 import { ReviewRoutes } from '../modules/review/review.route';
+import { SiteSettingRoutes } from '../modules/site-settings/site-settings.route';
 import { SubscriptionRoutes } from '../modules/subscription/subscription.route';
 import { UserRoutes } from '../modules/user/user.route';
 
@@ -43,6 +44,10 @@ const moduleRoutes = [
     path: '/payment',
     route: paymentRoutes,
   },
+  {
+    path: '/site-settings',
+    route: SiteSettingRoutes
+  }
 ];
 
 moduleRoutes.forEach((route) => router.use(route.path, route.route));
